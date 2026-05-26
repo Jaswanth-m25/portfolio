@@ -1,13 +1,34 @@
 import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 const projects = [
+    {
+    title: "Hotel Rooms Booking System",
+
+    description:
+      "A full-stack hotel booking application supporting room search, booking, authentication, real-time availability tracking, and an admin dashboard for inventory and booking analytics.",
+
+    image: "/projects/project_1.png",
+
+    tags: [
+      "JavaScript",
+      "Node.js",
+      "MongoDB",
+      "Express.js",
+      "EJS",
+    ],
+
+    link: "https://shelterseek-navy.vercel.app",
+
+    github:
+      "https://github.com/Jaswanth-m25",
+  },
   {
     title: "Fashion Ecommerce Platform",
 
     description:
       "A full-stack fashion ecommerce platform with customer, vendor, and admin dashboards, Razorpay payments, wishlist system, analytics, inventory management, and secure authentication.",
 
-    image: "/projects/ecommerce.png",
+    image: "/projects/project_2.png",
 
     tags: [
       "React.js",
@@ -18,7 +39,7 @@ const projects = [
       "JWT",
     ],
 
-    link: "https://your-ecommerce-live-link.com",
+    link: "https://fashion-ecommerce-ulla-8bygdrbeh-jaswanths-projects-b4afc9ab.vercel.app",
 
     github:
       "https://github.com/Jaswanth-m25/Fashion-Ecommerce",
@@ -40,55 +61,34 @@ const projects = [
       "Express.js",
     ],
 
-    link: "https://your-chatapp-live-link.com",
+    link: "https://chat-nrt5wsmvl-jaswanths-projects-b4afc9ab.vercel.app",
 
     github:
-      "https://github.com/Jaswanth-m25",
+      "https://github.com/Jaswanth-m25/chat/tree/main",
   },
 
-  {
-    title: "Hotel Rooms Booking System",
 
-    description:
-      "A full-stack hotel booking application supporting room search, booking, authentication, real-time availability tracking, and an admin dashboard for inventory and booking analytics.",
+  // {
+  //   title: "AI-Based Voice Activity Detection",
 
-    image: "/projects/hotelbooking.png",
+  //   description:
+  //     "A transformer-based deep learning project for voice activity detection using multimodal audio-text embeddings and attention mechanisms for improved speech recognition performance.",
 
-    tags: [
-      "JavaScript",
-      "Node.js",
-      "MongoDB",
-      "Express.js",
-      "EJS",
-    ],
+  //   image: "/projects/vad.png",
 
-    link: "https://your-hotel-live-link.com",
+  //   tags: [
+  //     "Python",
+  //     "Transformers",
+  //     "PyTorch",
+  //     "Deep Learning",
+  //     "AI",
+  //   ],
 
-    github:
-      "https://github.com/Jaswanth-m25",
-  },
+  //   link: "#",
 
-  {
-    title: "AI-Based Voice Activity Detection",
-
-    description:
-      "A transformer-based deep learning project for voice activity detection using multimodal audio-text embeddings and attention mechanisms for improved speech recognition performance.",
-
-    image: "/projects/vad.png",
-
-    tags: [
-      "Python",
-      "Transformers",
-      "PyTorch",
-      "Deep Learning",
-      "AI",
-    ],
-
-    link: "#",
-
-    github:
-      "https://github.com/Jaswanth-m25",
-  },
+  //   github:
+  //     "https://github.com/Jaswanth-m25",
+  // },
 ];
 
 export const Projects = () => {
@@ -185,12 +185,12 @@ export const Projects = () => {
         </div>
 
         {/* View All CTA */}
-        <div className="text-center mt-12 animate-fade-in animation-delay-500">
+        {/* <div className="text-center mt-12 animate-fade-in animation-delay-500">
           <AnimatedBorderButton>
             View All Projects
             <ArrowUpRight className="w-5 h-5" />
           </AnimatedBorderButton>
-        </div>
+        </div> */}
       </div>
     </section>
   );

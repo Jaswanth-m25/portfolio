@@ -21,14 +21,14 @@ export const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo & Copyright */}
-          <div className="text-center md:text-left">
+          {/* <div className="text-center md:text-left">
             <a href="#" className="text-xl font-bold tracking-tight">
               PM<span className="text-primary">.</span>
             </a>
             <p className="text-sm text-muted-foreground mt-2">
               © {currentYear} Pedro Machado. All rights reserved.
             </p>
-          </div>
+          </div> */}
 
           {/* Links */}
           <nav className="flex flex-wrap justify-center gap-6">
