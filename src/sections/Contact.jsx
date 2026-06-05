@@ -12,17 +12,17 @@ import emailjs from "@emailjs/browser";
 
 const contactInfo = [
   {
-    icon: Mail,
-    label: "Email",
-    value: "jaswanth6669@gmail.com",
-    href: "jaswanth6669@gmail.com",
-  },
-  {
-    icon: Phone,
-    label: "Phone",
-    value: "9948686669",
-    href: "9948686669",
-  },
+  icon: Mail,
+  label: "Email",
+  value: "jaswanth6669@gmail.com",
+  href: "mailto:jaswanth6669@gmail.com",
+},
+{
+  icon: Phone,
+  label: "Phone",
+  value: "9948686669",
+  href: "tel:+919948686669",
+},
   {
     icon: MapPin,
     label: "Location",
@@ -59,16 +59,18 @@ export const Contact = () => {
         );
       }
 
-      await emailjs.send(
-        serviceId,
-        templateId,
-        {
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-        },
-        publicKey
-      );
+await emailjs.send(
+  serviceId,
+  templateId,
+  {
+    from_name: formData.name,
+    from_email: formData.email,
+    message: formData.message,
+    reply_to: formData.email,
+    time: new Date().toLocaleString(),
+  },
+  publicKey
+);
 
       setSubmitStatus({
         type: "success",
@@ -76,13 +78,14 @@ export const Contact = () => {
       });
       setFormData({ name: "", email: "", message: "" });
     } catch (err) {
-      console.error("EmailJS error:", error);
-      setSubmitStatus({
-        type: "error",
-        message:
-          error.text || "Failed to send message. Please try again later.",
-      });
-    } finally {
+  console.error("EmailJS error:", err);
+
+  setSubmitStatus({
+    type: "error",
+    message:
+      err.text || "Failed to send message. Please try again later.",
+  });
+} finally {
       setIsLoading(false);
     }
   };
@@ -135,22 +138,24 @@ export const Contact = () => {
               </div>
 
               <div>
-                <label
-                  htmlFor="email"
-                  type="email"
-                  className="block text-sm font-medium mb-2"
-                >
-                  Email
-                </label>
-                <input
-                  required
-                  placeholder="your@email.com"
-                  value={formData.email}
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
-                  className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
-                />
+<label
+  htmlFor="email"
+  className="block text-sm font-medium mb-2"
+>
+  Email
+</label>
+
+<input
+  id="email"
+  type="email"
+  required
+  placeholder="your@email.com"
+  value={formData.email}
+  onChange={(e) =>
+    setFormData({ ...formData, email: e.target.value })
+  }
+  className="w-full px-4 py-3 bg-surface rounded-xl border border-border focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all"
+/>
               </div>
 
               <div>

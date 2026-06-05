@@ -39,7 +39,7 @@ const projects = [
       "JWT",
     ],
 
-    link: "https://fashion-ecommerce-ulla-8bygdrbeh-jaswanths-projects-b4afc9ab.vercel.app",
+    link: "https://fashion-ecommerce-ulla.vercel.app/",
 
     github:
       "https://github.com/Jaswanth-m25/Fashion-Ecommerce",
@@ -51,7 +51,7 @@ const projects = [
     description:
       "A modern real-time messaging platform with secure authentication, live online status, typing indicators, unread message tracking, and instant communication using Socket.IO.",
 
-    image: "/projects/chatapp.png",
+    image: "/projects/project_3.png",
 
     tags: [
       "React.js",
@@ -61,7 +61,7 @@ const projects = [
       "Express.js",
     ],
 
-    link: "https://chat-nrt5wsmvl-jaswanths-projects-b4afc9ab.vercel.app",
+    link: "https://chat-gules-phi.vercel.app/",
 
     github:
       "https://github.com/Jaswanth-m25/chat/tree/main",

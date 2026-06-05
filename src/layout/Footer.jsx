@@ -1,15 +1,14 @@
 import { Github, Linkedin, Twitter, Heart } from "lucide-react";
 
 const socialLinks = [
-  { icon: Github, href: "#", label: "GitHub" },
-  { icon: Linkedin, href: "#", label: "LinkedIn" },
-  { icon: Twitter, href: "#", label: "Twitter" },
+  { icon: Github, href: "https://github.com/Jaswanth-m25", label: "GitHub" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/jaswanth-medisetti-830478318/?skipRedirect=true", label: "LinkedIn" },
+  { icon: Twitter, href: "https://twitter.com/", label: "Twitter" },
 ];
 
 const footerLinks = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
-  { href: "#experience", label: "Experience" },
   { href: "#contact", label: "Contact" },
 ];
 
@@ -20,8 +19,8 @@ export const Footer = () => {
     <footer className="py-12 border-t border-border">
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          {/* Logo & Copyright */}
-          {/* <div className="text-center md:text-left">
+          {/* Logo & Copyright
+          <div className="text-center md:text-left">
             <a href="#" className="text-xl font-bold tracking-tight">
               PM<span className="text-primary">.</span>
             </a>
