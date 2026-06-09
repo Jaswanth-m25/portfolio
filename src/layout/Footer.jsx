@@ -3,12 +3,12 @@ import { Github, Linkedin, Twitter, Heart } from "lucide-react";
 const socialLinks = [
   { icon: Github, href: "https://github.com/Jaswanth-m25", label: "GitHub" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/jaswanth-medisetti-830478318/?skipRedirect=true", label: "LinkedIn" },
-  { icon: Twitter, href: "https://twitter.com/", label: "Twitter" },
 ];
 
 const footerLinks = [
   { href: "#about", label: "About" },
   { href: "#projects", label: "Projects" },
+  {href: "#skills", label: "Skills" },
   { href: "#contact", label: "Contact" },
 ];
 

@@ -1,4 +1,5 @@
 import { Button } from "@/components/Button";
+import { TypeAnimation } from "react-type-animation";
 import {
   ArrowRight,
   ChevronDown,
@@ -36,13 +37,15 @@ export const Hero = () => {
     <section className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <img
+        {/* <img
           src="/hero-bg.jpg"
           alt="Hero Background"
           className="w-full h-full object-cover opacity-40"
-        />
+        /> */}
 
-        <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-background" />
+         <div className="hero-aurora"></div>
+
+  <div className="absolute inset-0 bg-gradient-to-b from-background/20 via-background/80 to-background" />
       </div>
 
       {/* Floating Dots */}
@@ -159,10 +162,7 @@ export const Hero = () => {
                   icon: Linkedin,
                   href: "https://linkedin.com/in/YOUR-LINKEDIN",
                 },
-                {
-                  icon: Twitter,
-                  href: "#",
-                },
+
               ].map((social, idx) => (
                 <a
                   key={idx}

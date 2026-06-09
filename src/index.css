@@ -1,72 +1,164 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: #0f1418;
-  --color-foreground: #f0f2f5;
+/* Background Colors */
+--color-background: #050816;
+--color-foreground: #f8fafc;
 
-  --color-card: #141a1f;
+--color-card: #0f172a;
+--color-surface: #111827;
 
-  --color-primary: #20b2a6;
-  --color-primary-foreground: #ffffff;
+/* Main Accent */
+--color-primary: #8b5cf6;
+--color-primary-foreground: #ffffff;
 
-  --color-secondary: #1f2830;
-  --color-secondary-foreground: #20b2a6;
+/* Secondary */
+--color-secondary: #1e293b;
+--color-secondary-foreground: #8b5cf6;
 
-  --color-muted: #252e37;
-  --color-muted-foreground: #7a8491;
+/* Text */
+--color-muted: #1f2937;
+--color-muted-foreground: #94a3b8;
 
-  --color-border: #242b32;
+/* Borders */
+--color-border: #1e293b;
 
-  --radius: 0.75rem;
+--radius: 0.75rem;
 
-  --color-highlight: #f5a623;
-  --color-surface: #1a2329;
+/* Highlight */
+--color-highlight: #3b82f6;
 }
 
 @layer base {
-  html {
-    scroll-behavior: smooth;
-  }
+html {
+scroll-behavior: smooth;
+}
 
-  button {
-    cursor: pointer;
-  }
+button {
+cursor: pointer;
+}
 
-  body {
-    background-color: var(--color-background);
-    color: var(--color-foreground);
-    font-family: "Inter", sans-serif;
-  }
+body {
+background:
+radial-gradient(
+circle at 15% 15%,
+rgba(139, 92, 246, 0.15),
+transparent 25%
+),
+radial-gradient(
+circle at 85% 75%,
+rgba(59, 130, 246, 0.15),
+transparent 25%
+),
+#050816;
 
-  .font-serif {
-    font-family: "Playfair Display", serif;
-  }
+
+color: var(--color-foreground);
+font-family: "Inter", sans-serif;
+overflow-x: hidden;
+
+
+}
+
+.font-serif {
+font-family: "Playfair Display", serif;
+}
+}
+
+/* Floating Background Glow */
+body::before {
+content: "";
+position: fixed;
+inset: 0;
+
+background:
+radial-gradient(
+circle at 20% 20%,
+rgba(139, 92, 246, 0.08),
+transparent 30%
+),
+radial-gradient(
+circle at 80% 80%,
+rgba(59, 130, 246, 0.08),
+transparent 30%
+);
+
+pointer-events: none;
+z-index: -1;
 }
 
 @layer components {
-  .glass {
-    background-color: color-mix(in srgb, var(--color-surface) 50%, transparent);
-    backdrop-filter: blur(16px);
-    border: 1px solid color-mix(in srgb, var(--color-border) 50%, transparent);
-  }
+.glass {
+background: rgba(17, 24, 39, 0.5);
+backdrop-filter: blur(20px);
 
-  .glass-strong {
-    background-color: color-mix(in srgb, var(--color-surface) 80%, transparent);
-    backdrop-filter: blur(24px);
-    border: 1px solid color-mix(in srgb, var(--color-border) 60%, transparent);
-  }
+border: 1px solid rgba(139, 92, 246, 0.15);
 
-  .glow-text {
-    text-shadow: 0 0 30px
-      color-mix(in srgb, var(--color-primary) 50%, transparent);
-  }
 
-  .glow-border {
-    box-shadow: 0 0 20px
-        color-mix(in srgb, var(--color-primary) 20%, transparent),
-      inset 0 0 20px color-mix(in srgb, var(--color-primary) 5%, transparent);
-  }
 }
+
+.glass-strong {
+background: rgba(17, 24, 39, 0.8);
+backdrop-filter: blur(24px);
+
+border: 1px solid rgba(139, 92, 246, 0.2);
+
+
+}
+
+.glow-text {
+text-shadow:
+0 0 20px rgba(139, 92, 246, 0.5),
+0 0 40px rgba(139, 92, 246, 0.25);
+}
+
+.glow-border {
+box-shadow:
+0 0 25px rgba(139, 92, 246, 0.15),
+0 0 50px rgba(139, 92, 246, 0.08);
+}
+.hero-aurora {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.hero-aurora::before {
+  content: "";
+  position: absolute;
+
+  width: 800px;
+  height: 800px;
+
+  top: -250px;
+  left: -150px;
+
+  border-radius: 50%;
+
+  background: rgba(139, 92, 246, 0.25);
+
+  filter: blur(180px);
+}
+
+.hero-aurora::after {
+  content: "";
+  position: absolute;
+
+  width: 700px;
+  height: 700px;
+
+  right: -200px;
+  bottom: -200px;
+
+  border-radius: 50%;
+
+  background: rgba(59, 130, 246, 0.20);
+
+  filter: blur(180px);
+}
+}
+
 
 @layer utilities {
   @keyframes fade-in {
