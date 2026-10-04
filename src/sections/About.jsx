@@ -1,153 +1,126 @@
-import { Code2, Lightbulb, Rocket, Users } from "lucide-react";
-
-const highlights = [
-  {
-    icon: Code2,
-
-    title: "Full Stack Development",
-
-    description:
-      "Building scalable and modern web applications using React.js, Node.js, Express.js, and MongoDB.",
-  },
-
-  {
-    icon: Rocket,
-
-    title: "Performance & Scalability",
-
-    description:
-      "Creating responsive, optimized, and high-performance applications with smooth user experiences.",
-  },
-
-  {
-    icon: Users,
-
-    title: "Real-World Solutions",
-
-    description:
-      "Developing practical systems including ecommerce platforms, booking systems, and real-time applications.",
-  },
-
-  {
-    icon: Lightbulb,
-
-    title: "Continuous Learning",
-
-    description:
-      "Exploring modern technologies, AI concepts, and best development practices to improve every day.",
-  },
-];
-
 export const About = () => {
   return (
-    <section
-      id="about"
-      className="py-32 relative overflow-hidden"
-    >
-      <div className="container mx-auto px-6 relative z-10">
+    <section id="about" className="py-24 relative overflow-hidden">
+      <div className="container mx-auto px-6 max-w-5xl">
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+        {/* Section Heading */}
+        <div className="mb-14">
+          {/* <span className="text-sm uppercase tracking-[0.2em] text-primary">
+            About Me
+          </span> */}
 
-          {/* LEFT CONTENT */}
+          <h2 className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground">
+            About
+            <span className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100 text-secondary-foreground text-white">
+              {" "}
+              Me
+            </span>
+          </h2>
+        </div>
+
+        {/* Introduction */}
+        <div className="max-w-3xl space-y-6 text-muted-foreground leading-relaxed">
+          <p className="text-lg">
+            I’m{" "}
+            <span className="text-white font-semibold">
+              Jaswanth Medisetti
+            </span>
+            , a Computer Science undergraduate at{" "}
+            <span className="text-white font-medium">
+              IIIT Sri City
+            </span>
+            , with a strong interest in software development and
+            problem solving.
+          </p>
+
+          <p>
+            I enjoy building practical applications, understanding
+            how software systems work, and continuously improving
+            my technical and problem-solving abilities. I am
+            particularly interested in software engineering,
+            artificial intelligence, and developing solutions to
+            real-world problems.
+          </p>
+
+          <p>
+            My goal is to begin my career as a software engineer
+            where I can apply what I have learned, work on
+            meaningful projects, and continue growing as a
+            developer.
+          </p>
+        </div>
+
+        {/* Education */}
+        <div className="mt-16">
+          <h3 className="text-2xl font-semibold text-white mb-8">
+            Education
+          </h3>
+
           <div className="space-y-8">
 
-            {/* Small Heading */}
-            <div className="animate-fade-in">
-              <span className="text-secondary-foreground text-sm font-medium tracking-wider uppercase">
-                About Me
-              </span>
-            </div>
+            {/* Degree */}
+            <div className="border-l-2 border-primary pl-6">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
+                <div>
+                  <h4 className="text-xl font-semibold text-white">
+                    Indian Institute of Information Technology,
+                    Sri City
+                    
+                  </h4>
 
-            {/* Main Heading */}
-            <h2 className="text-4xl md:text-5xl font-bold leading-tight animate-fade-in animation-delay-100 text-secondary-foreground">
-              Turning ideas into
-              <span className="font-serif italic font-normal text-white">
-                {" "}
-                impactful digital products.
-              </span>
-            </h2>
-
-            {/* Description */}
-            <div className="space-y-5 text-muted-foreground leading-relaxed animate-fade-in animation-delay-200">
-
-              <p>
-                Hi, I'm{" "}
-                <span className="text-white font-semibold">
-                  Jaswanth Medisetti
-                </span>
-                , a Computer Science undergraduate at IIIT Sri City
-                with a strong passion for full-stack web development
-                and modern software engineering.
-              </p>
-
-              <p>
-                I specialize in building scalable web applications
-                using technologies like React.js, Node.js,
-                Express.js, MongoDB, and JavaScript. My focus is on
-                creating responsive, user-friendly interfaces combined
-                with robust backend systems and real-world functionality.
-              </p>
-
-              <p>
-                I have developed several projects including a
-                Fashion Ecommerce Platform, Real-Time Chat Application,
-                and Hotel Room Booking System with features like
-                authentication, payment integration, analytics,
-                inventory management, and real-time communication.
-              </p>
-
-              <p>
-                Apart from development, I am deeply interested in
-                Data Structures & Algorithms, Operating Systems,
-                DBMS, Computer Networks, and Artificial Intelligence.
-                I continuously explore new technologies and improve
-                my problem-solving and development skills.
-              </p>
-            </div>
-
-            {/* Quote Box */}
-            <div className="glass rounded-2xl p-6 glow-border animate-fade-in animation-delay-300">
-
-              <p className="text-lg font-medium italic text-foreground leading-relaxed">
-                "I believe technology should not only solve problems
-                but also create meaningful and seamless experiences
-                for users through clean design and efficient systems."
-              </p>
-            </div>
-          </div>
-
-          {/* RIGHT SIDE CARDS */}
-          <div className="grid sm:grid-cols-2 gap-6">
-
-            {highlights.map((item, idx) => (
-
-              <div
-                key={idx}
-                className="glass p-6 rounded-2xl animate-fade-in hover:border-primary/30 transition-all duration-300"
-                style={{
-                  animationDelay: `${(idx + 1) * 100}ms`,
-                }}
-              >
-                {/* Icon */}
-                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4 hover:bg-primary/20 transition-all duration-300">
-
-                  <item.icon className="w-6 h-6 text-primary" />
-
+                  <p className="mt-1 text-muted-foreground">
+                   B.Tech in Computer Science and Engineering
+                  </p>
                 </div>
 
-                {/* Title */}
-                <h3 className="text-lg font-semibold mb-3 text-white">
-                  {item.title}
-                </h3>
-
-                {/* Description */}
-                <p className="text-sm text-muted-foreground leading-relaxed">
-                  {item.description}
-                </p>
+                <span className="text-sm text-muted-foreground">
+                  CGPA: 7.7/10
+                </span>
               </div>
-            ))}
+            </div>
+
+            {/* Intermediate */}
+            <div className="border-l-2 border-primary/40 pl-6">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
+                <div>
+                  <h4 className="text-xl font-semibold text-white">
+                    Lakshya International School
+                  </h4>
+
+                  <p className="mt-1 text-muted-foreground">
+                     Intermediate
+                  </p>
+                </div>
+
+                <span className="text-sm text-muted-foreground">
+                  Percentage: 78%
+                </span>
+              </div>
+            </div>
+
+            {/* School */}
+            <div className="border-l-2 border-primary/20 pl-6">
+              <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-2">
+                <div>
+                  <h4 className="text-xl font-semibold text-white">
+                    Aditya Talent School
+                    Secondary Education
+                  </h4>
+
+                  <p className="mt-1 text-muted-foreground">
+                    Class 10
+                  </p>
+                </div>
+
+                <span className="text-sm text-muted-foreground">
+                  Percentage: 94%
+                </span>
+              </div>
+            </div>
+
           </div>
         </div>
+
       </div>
     </section>
   );

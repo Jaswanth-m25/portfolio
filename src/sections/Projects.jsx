@@ -1,6 +1,31 @@
 import { ArrowUpRight, Github } from "lucide-react";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 const projects = [
+{
+  title: "CodeDive",
+
+  description:
+    "A full-stack AI-powered code review platform that connects GitHub repositories, monitors pull requests, generates automated AI code reviews, tracks review history, and provides subscription and usage management.",
+
+  image: "/projects/project_4.png",
+
+  tags: [
+    "Next.js",
+    "TypeScript",
+    "PostgreSQL",
+    "Prisma",
+    "GitHub API",
+    "Inngest",
+    "Groq",
+    "Better Auth",
+    "Polar",
+  ],
+
+  link: "https://code-dive.vercel.app",
+
+  github:
+    "https://github.com/Jaswanth-m25/CodeDive",
+},
     {
     title: "Hotel Rooms Booking System",
 
@@ -21,6 +46,28 @@ const projects = [
 
     github:
       "https://github.com/Jaswanth-m25",
+  },
+  
+  {
+    title: "Real-Time Chat Application",
+
+    description:
+      "A modern real-time messaging platform with secure authentication, live online status, typing indicators, unread message tracking, and instant communication using Socket.IO.",
+
+    image: "/projects/project_3.png",
+
+    tags: [
+      "React.js",
+      "Socket.IO",
+      "MongoDB",
+      "Node.js",
+      "Express.js",
+    ],
+
+    link: "https://chat-gules-phi.vercel.app/",
+
+    github:
+      "https://github.com/Jaswanth-m25/chat/tree/main",
   },
   {
     title: "Fashion Ecommerce Platform",
@@ -43,28 +90,6 @@ const projects = [
 
     github:
       "https://github.com/Jaswanth-m25/Fashion-Ecommerce",
-  },
-
-  {
-    title: "Real-Time Chat Application",
-
-    description:
-      "A modern real-time messaging platform with secure authentication, live online status, typing indicators, unread message tracking, and instant communication using Socket.IO.",
-
-    image: "/projects/project_3.png",
-
-    tags: [
-      "React.js",
-      "Socket.IO",
-      "MongoDB",
-      "Node.js",
-      "Express.js",
-    ],
-
-    link: "https://chat-gules-phi.vercel.app/",
-
-    github:
-      "https://github.com/Jaswanth-m25/chat/tree/main",
   },
 
 
